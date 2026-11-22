@@ -12,7 +12,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" ];
-      # theme = "robbyrussell";     # leave unset if using p10k
+      theme = "robbyrussell";     # leave unset if using p10k
     };
 
     initContent = ''
