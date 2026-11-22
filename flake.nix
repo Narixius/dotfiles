@@ -26,8 +26,11 @@
         };
     in {
       homeConfigurations = {
-        linux = mkHome { system = "x86_64-linux"; username = "narixius"; };
-        mac   = mkHome { system = "aarch64-darwin"; username = "narixius"; };
+        darwin-arm64  = mkHome { system = "aarch64-darwin"; username = "narixius"; };
+        darwin-x86_64 = mkHome { system = "x86_64-darwin";  username = "narixius"; };
+        linux-aarch64 = mkHome { system = "aarch64-linux";  username = "narixius"; };
+        linux-arm64   = mkHome { system = "arm64-linux";    username = "narixius"; };
+        linux-x86_64  = mkHome { system = "x86_64-linux";   username = "narixius"; };
       };
     };
 }
