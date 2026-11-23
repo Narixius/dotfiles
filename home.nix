@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   imports = [ ./zsh.nix ];
 
@@ -9,6 +9,14 @@
     git
     ripgrep
     fd
+  ];
+
+   home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.bun/bin"
+    "$HOME/go/bin"
+  ] ++ lib.optionals pkgs.stdenv.isDarwin [
+    "/opt/homebrew/bin"
   ];
 
   programs.starship = {
